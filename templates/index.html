@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Hello from H1</h1>
+    <h6>Hello from H6</h6>
+    <p>Это параграф</p>
+    <a href="https://www.google.com/">Это ссылка</a>
+    <ul>
+        Меню
+        {% for item in menu %}
+        <li>{{ item }}</li>
+        {% endfor %}
+<!--        <li>Поспать</li>-->
+<!--        <li>Поесть</li>-->
+<!--        <li>Попить воды</li>-->
+    </ul>
+
+</body>
+</html>
