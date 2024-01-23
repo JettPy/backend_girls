@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     #  Заменим html строку на функцию render_template.
     # Она принимает название html файла и переменные используемые в шаблоне
-    # все шаблоны html берутся из папки templates
+    # все шаблоны html берутся из папки templates.
     return render_template('index.html', title='Мой сайт', menu=['Поспать', 'Поесть', 'Попить воды'])
 
 
