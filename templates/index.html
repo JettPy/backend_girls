@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet"  href ="index.css">
     <title>{{ title }}</title>
 </head>
 <body>
@@ -9,6 +10,7 @@
     <h4>hello from ira</h4>
     <p>Это параграф</p>
     <a href="google.com">Это ссылка</a>
+    {% if menu %}
     <ul>
         Меню
         {% for item in menu %}
@@ -18,7 +20,8 @@
 <!--        <li>Поесть</li>-->
 <!--        <li>Попить</li>-->
     </ul>
-
-
+{% else %}
+    <h2>Меню нет</h2>
+{% endif %}
 </body>
 </html>
