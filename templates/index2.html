@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+<!--    Добавим файлик со стилями, пусть он лежит в отдельной папке static и называется index.css -->
+    <link rel="stylesheet" href="/static/index.css">
+    {% if name %}
+    <title>{{ name }}</title>
+    {% else %}
+    <title>Мой сайт</title>
+    {% endif %}
+</head>
+<body>
+    {% if name %}
+    <h1>Привет {{ name }}</h1>
+    {% else %}
+    <h1>Привет мир!</h1>
+    {% endif %}
+    <a href="https://www.google.com/">Это ссылка</a>
+<!-- помимо циклов jinja2 поддерживает и ветвление в зависимости от значения переменной -->
+{% if menu %}
+<!--    Если меню есть, то мы его отобразим как и раньше -->
+    <ul>
+        Меню
+        {% for item in menu %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<!--    Если же меню нет, отобразим пользователю сообщение, что меню нет -->
+    <h2>Меню нет</h2>
+<!--    Как и конец цикла, блок ветвления тоже нужно закрывать -->
+{% endif %}
+</body>
+</html>
