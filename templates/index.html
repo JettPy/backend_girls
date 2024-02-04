@@ -2,12 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
     <title>{{title}}</title>
 </head>
+
 <body>
 <h6>Hello derecher</h6>
 <p>Это параграф</p>
 <a href="https://www.google.com/">Это ссылка</a>
+{% if menu %}
 <ul>
     Меню
     {%for item in menu%}
@@ -17,6 +20,8 @@
 <!--    <li>Побегать</li>-->
 <!--    <li> Купить сиагреты с вином </li>-->
 </ul>
-
+{% else %}
+   <h2>Меню нет</h2>
+{% endif %}
 </body>
 </html>
