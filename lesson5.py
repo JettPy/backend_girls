@@ -18,7 +18,7 @@ def blog():
         content = request.form['content']
         post = {"title": title, "content": content, 'date': datetime.now()}
         posts.append(post)
-    return render_template('blog,html', posts=posts)
+    return render_template('blog.html', posts=posts)
 
 
 if __name__ == '__main__':
