@@ -15,7 +15,7 @@ def index():
 @app.route("/blog",methods=["GET","POST"])
 def blog():
     if request.method =="POST":
-        title = request.from["title"]
+        title = request.form["title"]
         content = request.form["content"]
         post = {"title": title,"content": content,"date": datetime.now()}
         posts.append(post)
