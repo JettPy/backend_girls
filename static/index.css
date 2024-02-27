@@ -1,21 +1,53 @@
+/* стили бывают разные и по разному указываются сегодня разберем с вами основные из них*/
+/* 1) стили по тегу - указываются к тегу, пример: */
+/*
 body {
+
+}
+*/
+
+/* 2) стили по классу - указываются через точку, пример: */
+/*
+.my-class-name {
+
+}
+*/
+
+/* 2) стили по id - указываются через решетку, пример: */
+/*
+#my-id-name {
+
+}
+*/
+
+body {
+    /* margin - внешний отступ */
     margin: 0;
+    /* padding - внутренний отступ */
     padding: 0;
+    /* font-family - семейство шрифтов */
     font-family: Helvetica;
 }
 
 header {
+    /* background-color - цвет заднего фона */
     background-color: #7299ff;
+    /* width - ширина, может задаваться в пикселях или процентах */
     width: 100%;
+    /* height - высота, может задаваться в пикселях или процентах */
     height: 70px;
 }
 
 .blog-title {
     margin: auto;
     width: 200px;
+    /* padding - можно задавать отдельно, например для верха это top */
     padding-top: 20px;
+    /* color - цвет букв в элементе */
     color: #edf1ff;
+    /* font-size - размер шрифта */
     font-size: 24px;
+    /* text-align - размещение текста по центру элемента */
     text-align: center;
 }
 
@@ -24,6 +56,7 @@ main {
     margin: auto;
     padding-top: 20px;
     width: 100%;
+    /* min-height - минимальная высота элемента, она может быть высота этого значения */
     min-height: 600px;
 }
 
@@ -60,4 +93,32 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.blog-posts {
+    padding-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+div {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+p:last-child {
+  color: #888;
 }

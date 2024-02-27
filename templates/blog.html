@@ -23,6 +23,16 @@
 <!--   input c type="submit" это кнопка по нажатию на которую отправляется запрос     -->
         <input type="submit" value="Опубликовать">
     </form>
+<!--    Добавим секцию с нашими постами -->
+    <section class="blog-posts">
+        {% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>Created on {{ post.date }}</p>
+    </div>
+    {% endfor %}
+    </section>
 </main>
 <footer>
 
